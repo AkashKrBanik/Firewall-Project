@@ -1,2 +1,2 @@
 # Firewall-Project
-this is firewall project
+Distributed Firewall Rule Generator Project created using python.
