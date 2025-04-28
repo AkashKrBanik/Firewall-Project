@@ -2,7 +2,7 @@
 # Firewall Management System
 
 ## Overview
-The Firewall Management System is a server-client-based application designed to centralize the management, generation, and enforcement of firewall rules across distributed systems.  
+The Firewall Management System (Distributed Firewall Rule Generator) is a robust, modular server-client-based application designed to centralize the management, generation, and enforcement of firewall rules across distributed systems.  
 It utilizes `iptables` to define and enforce network policies, ensuring secure and efficient access management.  
 The system includes a Policy Editor for administrators to manage firewall rules dynamically and a robust logging mechanism for auditing purposes.
 
@@ -28,12 +28,19 @@ The system includes a Policy Editor for administrators to manage firewall rules 
 ### Group-Specific Policies
 - Tailored firewall rules for user groups such as corporate, vpn_users, developers, guests, admins, and blocked_users.
 
+### SSH Remote Access Support
+- Remotely apply firewall policies over SSH using `ssh_policy_push.py`.
+
 ---
 
-## Use Cases
-- **Enterprise Networks:** Enforce group-specific security policies for different departments.
-- **Educational Institutions:** Manage network access for students, faculty, and guests.
-- **Organizations:** Ensure consistent and secure firewall rules across distributed systems.
+## Tools and Libraries Used
+- Python 3.12.7 on Kali Linux
+- Socket (Python networking)
+- Paramiko (SSH communication)
+- YAML (configuration management)
+- JSON (policy storage)
+- iptables (firewall rule enforcement)
+- subprocess, threading, logging
 
 ---
 
@@ -64,6 +71,7 @@ FirewallProject/
 - Python 3.6 or higher
 - `iptables` installed on the client machine
 - Linux-based operating system
+- `paramiko` and `pyyaml` Python packages
 
 ### Steps
 
@@ -138,16 +146,12 @@ Example:
 
 ---
 
-## Testing
+## Architecture Overview
 
-### 1. Unit Testing
-- Test individual components such as `safe_execute`, `add_group`, and `delete_policy`.
-
-### 2. Integration Testing
-- Test server-client communication and policy dispatching.
-
-### 3. Manual Testing
-- Simulate real-world scenarios by connecting multiple clients and managing policies dynamically.
+- **Server:** Listens for client connections, authenticates them, dispatches policies.
+- **Client:** Authenticates to server, receives and executes firewall rules.
+- **Policy Editor:** Tool to dynamically manage firewall rule sets.
+- **SSH Policy Push:** Module to apply firewall policies to remote machines via SSH.
 
 ---
 
@@ -197,6 +201,8 @@ Group name: developers
 
 ## Known Issues
 
+- No GUI support yet; only CLI-based.
+- Limited to Linux-based systems using `iptables`.
 - Requires manual reset of `iptables` rules after testing.
 - Invalid `iptables` commands in `user_policies.json` may cause execution errors.
 
@@ -204,6 +210,7 @@ Group name: developers
 
 ## Future Enhancements
 
-- Add a web-based interface for managing policies.
-- Implement dynamic policy updates without restarting the server.
+- Add a GUI or web-based management dashboard.
+- Extend platform support (Windows, UFW).
+- Enhance SSH error handling and rule validation.
 - Add validation for `iptables` rules inside `user_policies.json`.
