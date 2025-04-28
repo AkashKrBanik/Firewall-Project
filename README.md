@@ -191,6 +191,37 @@ Group name: developers
 
 ---
 
+## Screenshots 🖼️
+
+- **Starting Server**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/server.png" alt="server" width="1000">
+  
+- **Starting Client and Applying Rules on Client**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/client.png" alt="client" width="1000">
+
+- **Server after Rules applied on Client**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/server2.png" alt="server2" width="1000">
+
+- **Policy Dispatcher (Admin Portal)**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/p1.png" alt="policydispatcher1" width="1000">
+
+- **Option-1: View All Policies**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/p2.png" alt="policydispatcher2" width="1000">
+
+- **Option-2: Add New Group &nbsp; && &nbsp; Option-3: Add Policy to New Group**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/p3.png" alt="policydispatcher3" width="1000">
+
+- **New Policy Added to Testers Group**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/p4.png" alt="policydispatcher4" width="1000">
+
+- **Option-4: Delete Policy from a group &nbsp; && &nbsp; Option-5: Remove Group**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/p5.png" alt="policydispatcher5" width="1000">
+
+- **Option-6: Exit &nbsp; && &nbsp; Changes Saved**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/p6.png" alt="policydispatcher6" width="1000">
+
+---
+
 ## Performance Metrics
 
 - **Policy Dispatch Time:** ~50ms per policy
