@@ -137,9 +137,9 @@ Example:
     "iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT",
     "iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT"
   ],
-  "blocked_users": [
-    "iptables -A OUTPUT -j DROP",
-    "iptables -A INPUT -j DROP"
+  "guests": [
+    "iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT",
+    "iptables -A OUTPUT -p tcp --dport 21 -j DROP"
   ]
 }
 ```
