@@ -220,6 +220,9 @@ Group name: developers
 - **Option-6: Exit &nbsp; && &nbsp; Changes Saved**
   <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/p6.png" alt="policydispatcher6" width="1000">
 
+- **Record Logs: Keeping track of every activity made**
+  <img src="https://github.com/AkashKrBanik/Firewall-Project/blob/main/Screenshots/logs.png" alt="policydispatcher6" width="1000">
+
 ---
 
 ## Performance Metrics
