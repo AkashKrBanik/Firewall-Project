@@ -1,12 +1,12 @@
 
 # Firewall Management System
 
-## Overview
+## Overview 📄
 The Firewall Management System (Distributed Firewall Rule Generator) is a robust, modular server-client-based application designed to centralize the management, generation, and enforcement of firewall rules across distributed systems.  
 It utilizes `iptables` to define and enforce network policies, ensuring secure and efficient access management.  
 The system includes a Policy Editor for administrators to manage firewall rules dynamically and a robust logging mechanism for auditing purposes.
 
-## Features
+## Features ✨
 
 ### Server-Client Architecture
 - Centralized server for managing and dispatching firewall rules.
@@ -33,7 +33,7 @@ The system includes a Policy Editor for administrators to manage firewall rules 
 
 ---
 
-## Tools and Libraries Used
+## Tools and Libraries Used 🛠️
 - Python 3.12.7 on Kali Linux
 - Socket (Python networking)
 - Paramiko (SSH communication)
@@ -44,7 +44,7 @@ The system includes a Policy Editor for administrators to manage firewall rules 
 
 ---
 
-## Project Structure
+## Project Structure 🗂️
 
 ```
 FirewallProject/
@@ -65,7 +65,7 @@ FirewallProject/
 
 ---
 
-## Installation
+## Installation ⚙️
 
 ### Prerequisites
 - Python 3.6 or higher
@@ -116,7 +116,7 @@ python3 policy_editor.py
 
 ---
 
-## Configuration
+## Configuration 🛠️
 
 ### 1. Server Settings
 The server configuration is stored in `config/settings.yaml`:
@@ -146,7 +146,7 @@ Example:
 
 ---
 
-## Architecture Overview
+## Architecture Overview 🔄
 
 - **Server:** Listens for client connections, authenticates them, dispatches policies.
 - **Client:** Authenticates to server, receives and executes firewall rules.
@@ -225,7 +225,7 @@ Group name: developers
 
 ---
 
-## Performance Metrics
+## Performance Metrics 📈
 
 - **Policy Dispatch Time:** ~50ms per policy
 - **Concurrent Client Handling:** Up to 5 clients without noticeable delays
@@ -233,7 +233,7 @@ Group name: developers
 
 ---
 
-## Known Issues
+## Known Issues ⚠️
 
 - No GUI support yet; only CLI-based.
 - Limited to Linux-based systems using `iptables`.
@@ -242,7 +242,7 @@ Group name: developers
 
 ---
 
-## Future Enhancements
+## Future Enhancements 🚀
 
 - Add a GUI or web-based management dashboard.
 - Extend platform support (Windows, UFW).
