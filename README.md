@@ -6,8 +6,6 @@ The Firewall Management System is a server-client-based application designed to 
 It utilizes `iptables` to define and enforce network policies, ensuring secure and efficient access management.  
 The system includes a Policy Editor for administrators to manage firewall rules dynamically and a robust logging mechanism for auditing purposes.
 
----
-
 ## Features
 
 ### Server-Client Architecture
@@ -41,7 +39,7 @@ The system includes a Policy Editor for administrators to manage firewall rules 
 
 ## Project Structure
 
-\`\`\`
+```
 FirewallProject/
 ├── client/
 │   ├── agent.py               # Client-side script to connect to the server and execute policies
@@ -56,7 +54,7 @@ FirewallProject/
 │   ├── settings.yaml          # Configuration file for server settings
 ├── policy_editor.py           # Tool for managing firewall policies
 ├── policy_logs.log            # Log file for dispatched policies
-\`\`\`
+```
 
 ---
 
@@ -70,15 +68,15 @@ FirewallProject/
 ### Steps
 
 1. **Clone the repository:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/<your-username>/FirewallProject.git
    cd FirewallProject
-   \`\`\`
+   ```
 
 2. **Install required Python packages:**
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 3. **Configure the server:**
    - Edit `config/settings.yaml` to set the server's host, port, and `AUTH_TOKEN`.
@@ -92,21 +90,21 @@ FirewallProject/
 
 ### 1. Start the Server
 Run the server to listen for client connections:
-\`\`\`bash
+```bash
 sudo PYTHONPATH=. python3 controller/server.py
-\`\`\`
+```
 
 ### 2. Run the Client
 Run the client to connect to the server and execute policies:
-\`\`\`bash
+```bash
 sudo PYTHONPATH=. python3 client/agent.py
-\`\`\`
+```
 
 ### 3. Manage Policies
 Use the Policy Editor to manage firewall rules:
-\`\`\`bash
+```bash
 python3 policy_editor.py
-\`\`\`
+```
 
 ---
 
@@ -114,18 +112,18 @@ python3 policy_editor.py
 
 ### 1. Server Settings
 The server configuration is stored in `config/settings.yaml`:
-\`\`\`yaml
+```yaml
 server:
   host: 0.0.0.0
   port: 9090
   auth_token: "securetoken123"
-\`\`\`
+```
 
 ### 2. Firewall Rules
 Firewall rules are stored in `policies/user_policies.json`.  
 Example:
 
-\`\`\`json
+```json
 {
   "corporate": [
     "iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT",
@@ -136,7 +134,7 @@ Example:
     "iptables -A INPUT -j DROP"
   ]
 }
-\`\`\`
+```
 
 ---
 
@@ -157,7 +155,7 @@ Example:
 
 ### Policy Editor
 **Input:**
-\`\`\`
+```
 --- Policy Editor ---
 1. View all policies
 2. Add new group
@@ -167,25 +165,25 @@ Example:
 6. Exit
 Select an option: 2
 Enter new group name: test_group
-\`\`\`
+```
 
 **Output:**
-\`\`\`
+```
 Group 'test_group' added.
-\`\`\`
+```
 
 ### Server-Client Interaction
 **Input (Client):**
-\`\`\`
+```
 AUTH_TOKEN: securetoken123
 Group name: developers
-\`\`\`
+```
 
 **Output (Server):**
-\`\`\`
+```
 [+] Connection from ('127.0.0.1', 60644)
 [+] Dispatched to ('127.0.0.1', 60644): iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
-\`\`\`
+```
 
 ---
 
